@@ -6,8 +6,7 @@ import ast
 import matplotlib.font_manager as fm
 import os
 
-font_path = "data/NotoSansJP-Regular.otf"
-fpath = os.path.join(os.getcwd(), font_path)
+fpath = "./data/NotoSansJP-Regular.otf"
 prop = fm.FontProperties(fname=fpath)
 
 df_Pre_Mun = pd.read_csv('./data/Pre_Mun.csv')
