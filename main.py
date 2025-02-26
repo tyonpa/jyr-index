@@ -8,9 +8,7 @@ import os
 
 font_path = "./data/ipaexg.ttf"
 fpath = os.path.join(os.getcwd(), font_path)
-font_prop = fm.FontProperties(fname=font_path)
-plt.rcParams["font.family"] = "sans serif"
-fonts = fm.findSystemFonts()
+prop = fm.FontProperties(fname=fpath)
 
 print(font_prop.get_name())
 
@@ -77,11 +75,11 @@ def draw_score_change(df_score_2020:pd.DataFrame, df_score_2015:pd.DataFrame, df
                       columns=muni, 
                       index=[2020, 2015, 2010])
     fig, ax = plt.subplots()
-    df_score.plot(ax=ax)
+    df_score.plot(ax=ax, fontproperties=prop)
     ax.set_xticks([2010, 2015, 2020])
-    ax.set_ylabel('Score')
-    ax.set_title(f'Goal_{goal_num} score change')
-    ax.legend(bbox_to_anchor=(1.01, 1), loc='upper left')
+    ax.set_ylabel('Score', fontproperties=prop)
+    ax.set_title(f'Goal_{goal_num} score change', fontproperties=prop)
+    ax.legend(bbox_to_anchor=(1.01, 1), loc='upper left', fontproperties=prop)
     
     st.pyplot(fig)
 
