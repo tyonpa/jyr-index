@@ -4,8 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import ast
 import matplotlib.font_manager as fm
+import os
 
 font_path = "./data/ipaexg.ttf"
+fpath = os.path.join(os.getcwd(), font_path)
 font_prop = fm.FontProperties(fname=font_path)
 plt.rcParams["font.family"] = "sans serif"
 fonts = fm.findSystemFonts()
