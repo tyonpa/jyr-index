@@ -10,8 +10,6 @@ font_path = "./data/ipaexg.ttf"
 fpath = os.path.join(os.getcwd(), font_path)
 prop = fm.FontProperties(fname=fpath)
 
-print(font_prop.get_name())
-
 df_Pre_Mun = pd.read_csv('./data/Pre_Mun.csv')
 pre = df_Pre_Mun['Pre'].unique()
 
