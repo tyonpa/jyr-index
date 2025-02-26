@@ -60,7 +60,7 @@ def cal_draw_factor_analysis(df_goal_vars:pd.DataFrame, df_muni:pd.DataFrame, mu
     ax.scatter(x=muni, y=score, marker='D', color='k', s=40, label='スコア')
     ax.scatter(x=muni, y=score, marker='D', color='w', s=20)
     ax.axhline(0, color='r', linestyle='dashed', alpha=0.3)
-    ax.set_xticklabels(fontproperties=prop)
+    ax.set_xticklabels(muni, fontproperties=prop)
     ax.legend(bbox_to_anchor=(1.1, 1), loc='upper left', prop=prop)
     ax.set_title(f'Goal_{goal_num} Factor Analysis in {year}')
 
