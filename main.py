@@ -8,6 +8,7 @@ import matplotlib.font_manager as fm
 font_path = "./data/ipaexg.ttf"
 font_prop = fm.FontProperties(fname=font_path)
 plt.rcParams["font.family"] = "sans serif"
+fonts = fm.findSystemFonts()
 
 print(font_prop.get_name())
 
@@ -189,7 +190,7 @@ if choice == "Factor Analysis":
     
 elif choice == "Look SDGs Score":
     st.header("# Look SDGs Score")
-    st.text(f'{font_path}, {font_prop.get_name()}')
+    st.text(f'{fonts}')
     Prefecture = st.selectbox(
         'Chose "Prefecture"', 
         pre
