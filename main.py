@@ -177,10 +177,10 @@ if choice == "Factor Analysis":
         
         if st.button('Apply'):
             for i in range(0, len(SDGs_Goal)):
+                st.subheader(f'Goal {SDGs_Goal[i]}')
                 col1, col2 = st.columns(2)
                 with col1:
                     draw_score_change(df_score_2010, df_score_2015, df_score_2020, Municipalities, str(SDGs_Goal[i]))
-                    st.subheader(f'Goal {SDGs_Goal[i]}')
                 for j in range(2010, 2025, 5):
                     with col2:
                         cal_draw_factor_analysis(df_goal_vars, select_df(j, 'muni'), Municipalities, SDGs_Goal[i], j)
