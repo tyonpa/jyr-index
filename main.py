@@ -188,7 +188,6 @@ if choice == "Factor Analysis":
     
 elif choice == "Look SDGs Score":
     st.header("# Look SDGs Score")
-    st.text(f'{fonts}')
     Prefecture = st.selectbox(
         'Chose "Prefecture"', 
         pre
