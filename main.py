@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import japanize_matplotlib
 import ast
 
 df_Pre_Mun = pd.read_csv('./data/Pre_Mun.csv')
