@@ -60,7 +60,8 @@ def cal_draw_factor_analysis(df_goal_vars:pd.DataFrame, df_muni:pd.DataFrame, mu
     ax.scatter(x=muni, y=score, marker='D', color='k', s=40, label='スコア')
     ax.scatter(x=muni, y=score, marker='D', color='w', s=20)
     ax.axhline(0, color='r', linestyle='dashed', alpha=0.3)
-    ax.legend(bbox_to_anchor=(1.1, 1), loc='upper left')
+    ax.set_xticklabels(fontproperties=prop)
+    ax.legend(bbox_to_anchor=(1.1, 1), loc='upper left', prop=prop)
     ax.set_title(f'Goal_{goal_num} Factor Analysis in {year}')
 
     st.pyplot(fig) 
@@ -75,7 +76,7 @@ def draw_score_change(df_score_2020:pd.DataFrame, df_score_2015:pd.DataFrame, df
     df_score.plot(ax=ax)
     ax.set_xticks([2010, 2015, 2020])
     ax.set_ylabel('Score')
-    ax.set_title(f'Goal_{goal_num} score change', fontproperties=prop)
+    ax.set_title(f'Goal_{goal_num} score change')
     ax.legend(bbox_to_anchor=(1.01, 1), loc='upper left', prop=prop)
     
     st.pyplot(fig)
@@ -111,7 +112,7 @@ def draw_sdgs_mapping(df_score:pd.DataFrame, muni:str, year:int, back:bool = Fal
     ax.set_thetagrids(np.arange(0, 360, 360/17), labels=['']*17)
     ax.set_rgrids(np.arange(0, 110, 25), angle=0)
     ax.spines['polar'].set_visible(False)
-    ax.set_title(f'SDGs_Score {muni} in {year}', loc='left')
+    ax.set_title(f'SDGs_Score {muni} in {year}', loc='left', fontproperties=prop)
     
     st.pyplot(fig)
 
