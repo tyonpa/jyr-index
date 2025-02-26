@@ -7,6 +7,9 @@ import matplotlib.font_manager as fm
 
 font_path = "./data/ipaexg.ttf"
 font_prop = fm.FontProperties(fname=font_path)
+plt.rcParams["font.family"] = font_prop.get_name()
+
+print(font_prop.get_name())
 
 df_Pre_Mun = pd.read_csv('./data/Pre_Mun.csv')
 pre = df_Pre_Mun['Pre'].unique()
