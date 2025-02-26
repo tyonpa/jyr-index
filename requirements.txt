@@ -3,4 +3,3 @@ pandas
 numpy
 matplotlib
 japanize_matplotlib
-distutils
