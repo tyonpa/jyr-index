@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import ast
+import matplotlib.font_manager as fm
+
+font_path = "./data/ipaexg.ttf"
+font_prop = fm.FontProperties(fname=font_path)
 
 df_Pre_Mun = pd.read_csv('./data/Pre_Mun.csv')
 pre = df_Pre_Mun['Pre'].unique()
