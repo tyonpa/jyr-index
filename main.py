@@ -7,7 +7,7 @@ import matplotlib.font_manager as fm
 
 font_path = "./data/ipaexg.ttf"
 font_prop = fm.FontProperties(fname=font_path)
-plt.rcParams["font.family"] = font_prop.get_name()
+plt.rcParams["font.family"] = "sans serif"
 
 print(font_prop.get_name())
 
