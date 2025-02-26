@@ -72,9 +72,9 @@ def draw_score_change(df_score_2020:pd.DataFrame, df_score_2015:pd.DataFrame, df
                       columns=muni, 
                       index=[2020, 2015, 2010])
     fig, ax = plt.subplots()
-    df_score.plot(ax=ax, fontproperties=prop)
+    df_score.plot(ax=ax)
     ax.set_xticks([2010, 2015, 2020])
-    ax.set_ylabel('Score', fontproperties=prop)
+    ax.set_ylabel('Score')
     ax.set_title(f'Goal_{goal_num} score change', fontproperties=prop)
     ax.legend(bbox_to_anchor=(1.01, 1), loc='upper left', prop=prop)
     
