@@ -6,7 +6,7 @@ import ast
 import matplotlib.font_manager as fm
 import os
 
-font_path = "./data/NotoSansJP-Regular.otf"
+font_path = "data/NotoSansJP-Regular.otf"
 fpath = os.path.join(os.getcwd(), font_path)
 prop = fm.FontProperties(fname=fpath)
 
