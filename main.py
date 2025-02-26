@@ -188,6 +188,8 @@ if choice == "Factor Analysis":
     
 elif choice == "Look SDGs Score":
     st.header("# Look SDGs Score")
+    st.text(f'{fpath}')
+    st.text(f'{prop}')
     Prefecture = st.selectbox(
         'Chose "Prefecture"', 
         pre
