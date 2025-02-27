@@ -67,9 +67,9 @@ def cal_draw_factor_analysis(df_goal_vars:pd.DataFrame, df_muni:pd.DataFrame, mu
     st.pyplot(fig) 
 
 def draw_score_change(df_score_2020:pd.DataFrame, df_score_2015:pd.DataFrame, df_score_2010:pd.DataFrame, muni:list, goal_num:str):
-    df_score = pd.DataFrame([df_score_2020.loc[muni, [goal_num]].transpose().values.tolist()[0], 
+    df_score = pd.DataFrame([df_score_2010.loc[muni, [goal_num]].transpose().values.tolist()[0], 
                        df_score_2015.loc[muni, [goal_num]].transpose().values.tolist()[0], 
-                       df_score_2010.loc[muni, [goal_num]].transpose().values.tolist()[0]], 
+                       df_score_2020.loc[muni, [goal_num]].transpose().values.tolist()[0]], 
                       columns=muni, 
                       index=[2020, 2015, 2010])
     fig, ax = plt.subplots()
